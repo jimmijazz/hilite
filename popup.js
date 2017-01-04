@@ -1,5 +1,4 @@
 listStorage = {}
-
 // Document onload
 document.addEventListener("DOMContentLoaded", function(event) {
   function loadContent() {
@@ -29,8 +28,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                                 (result[key].text).substring(0, 30) +
                                 "</a>"
         deleteBtnCell.innerHTML = "x";
-
-
 
       };
 

@@ -7,14 +7,13 @@
 
 
 // ***** USER ACTIONS - when user clicks or presses something ***** //
-chrome.browserAction.onClicked.addListener(function(tab) {
-  // Send a message to the active tab
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    var activeTab = tabs[0];
-    chrome.tabs.sendMessage(activeTab.id, {"action": "clicked_browser_action"});
-  });
-});
-
+// chrome.browserAction.onClicked.addListener(function(tab) {
+//   // Send a message to the active tab
+//   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+//     var activeTab = tabs[0];
+//     chrome.tabs.sendMessage(activeTab.id, {"action": "clicked_browser_action"});
+//   });
+// });
 // When a hotkey is pressed, send the command to content.js
 chrome.commands.onCommand.addListener(function(command){
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
