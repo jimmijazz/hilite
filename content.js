@@ -27,7 +27,6 @@ function getRandomToken() {
     return hex;
 }
 
-
 // Check if user ID exists
 chrome.storage.sync.get('userid', function(items) {
     var userid = items.userid;
@@ -66,7 +65,7 @@ chrome.runtime.onMessage.addListener(
                  "item_id" : content_id,
                  "text": window.getSelection().toString(),
                  "url" : request.url,
-                 "hostname" : window.location.hostname
+                 "hostname" : window.location.hostname,
                  };
 
       listStorage[new Date().toString()] = content;
