@@ -14,6 +14,13 @@
 //     chrome.tabs.sendMessage(activeTab.id, {"action": "clicked_browser_action"});
 //   });
 // });
+
+// When icon in top bar is clicked
+chrome.browserAction.onClicked.addListener(function(activeTab){
+  var newURL = "https://hiliteapp.herokuapp.com";
+  chrome.tabs.create({ url: newURL });
+});
+
 // When a hotkey is pressed, send the command to content.js
 chrome.commands.onCommand.addListener(function(command){
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {

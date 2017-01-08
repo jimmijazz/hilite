@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HiLite</title>
-    <script type="text/javascript" src="popup.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <!-- Uncomment when want to integrate popup.
+    Also add "default_popup" : "window.html"  into browser_action in manifest-->
+    <!-- <script type="text/javascript" src="popup.js"></script> -->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"></link> -->
   </head>
   <body>
     <div>HiLite Application</div>
-    <button id="clickme">click me</button>
     <table id="content">
       <tbody>
       </tbody>
     </table>
+    <a id="viewAll" href="https://hiliteapp.herokuapp.com/">View all links</a>
   </body>
 </html>

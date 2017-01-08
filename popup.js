@@ -1,3 +1,7 @@
+
+
+// This file creates the popup and populates with the list
+
 listStorage = {}
 // Document onload
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -40,7 +44,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // deleteRow.parentNode.removeChild(deleteRow);
   };
 
-  document.getElementById('clickme').addEventListener('click', loadContent());
+  document.getElementById('viewAll').addEventListener('click', function() {
+    var indexpage = "https://hiliteapp.herokuapp.com/"
+    chrome.tabs.create({url: "https://hiliteapp.herokuapp.com/" });
+  });
   // document.getElementById('content').getElementsByTagName('td').addEventListener('click', deleteRow(this));
 
 
