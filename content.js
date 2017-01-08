@@ -19,7 +19,13 @@ function getRandomToken() {
     // E.g. 8 * 32 = 256 bits token
     var randomPool = new Uint8Array(32);
     crypto.getRandomValues(randomPool);
+
     var hex = '';
+
+    // Make sure first character is a letter (for query selecting ID's)
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    hex += possible.charAt(Math.floor(Math.random() * possible.length));
+
     for (var i = 0; i < randomPool.length; ++i) {
         hex += randomPool[i].toString(16);
     }
